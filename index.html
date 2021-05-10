@@ -21,16 +21,16 @@
         <div data-role="navbar" data-theme='e'>
           <ul>          
             <li><a href="#home">Home Page</a></li>
-            <li><a href="#add">Add Note</a></li>
-            <li><a href="#list">List Notes</a></li>
+            <li><a href="#add">Add Show</a></li>
+            <li><a href="#list">List Show</a></li>
           </ul>
         </div><!-- /navbar -->
-        <h2>Notes</h2>
+        <h2>MyShowList</h2>
       </div>
 
       <!-- content -->
       <div data-role="content" data-theme='e'>
-          Real application function code
+          Add shows you've watched or finished and give them ratings!
       </div>
 
       <!-- notes footer -->
@@ -49,24 +49,44 @@
         <div data-role="navbar" data-theme='e'>
           <ul>
             <li><a href="#home">Home Page</a></li>
-            <li><a href="#add">Add Note</a></li>
-            <li><a href="#list">List Notes</a></li>
+            <li><a href="#add">Add Show</a></li>
+            <li><a href="#list">List Show</a></li>
           </ul>
         </div><!-- /navbar -->
-        <h2>Add a Note</h2>
+        <h2>Add a Show</h2>
       </div>
 
       <!-- content -->
       <div data-role="content" data-theme='e'>
-        Enter note name <br/>
-        <input type="text" value="" id="note"/>
-        <label for="select-type">Select a Type</label>
-        <select name="select-type" id="select-type">
-          <option value="College">College</option>
-          <option value="Work">Work</option>
-          <option value="Home">Home</option>
+        Enter Show name: <br/>
+        <input type="text" value="" id="name"/>
+        <label for="type">Select a Type</label>
+        <select name="type" id="type">
+          <option value="Movie">Movie</option>
+          <option value="TVShow">TVShow</option>
         </select>
-        <input type="button" value="Click To Add Note" id="buttonAdd" />
+        <label for="select-type">Current Status:</label>
+        <select name="status" id="status">
+          <option value="Watching">Watching</option>
+          <option value="Completed">Completed</option>
+          <option value="Dropped">Dropped</option>
+          <option value="Plan to Watch">Plan to Watch</option>
+        </select>
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <input type="button" value="Click To Add Show" id="buttonAdd" />
       </div>
 
       <!-- notes footer -->
@@ -85,8 +105,8 @@
         <div data-role="navbar" data-theme='e'>
           <ul>
             <li><a href="#home">Home Page</a></li>
-            <li><a href="#add">Add Note</a></li>
-            <li><a href="#add">Add Note</a></li>
+            <li><a href="#add">Add Show</a></li>
+            <li><a href="#add">Add Show</a></li>
           </ul>
         </div><!-- /navbar -->
         <h2>List Notes</h2>
