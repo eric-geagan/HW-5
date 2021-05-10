@@ -1,19 +1,32 @@
-let promise = import('class.js')
+class Show {
+  constructor(name, type, status, rating) {
+    this.name = name
+    this.type = type
+    this.status = status
+    this.rating = rating
+  }
+
+  getAll() {
+    return 'some string'
+  }
+}
+
 let list = []
 
 function formSubmitEvent() {
   // Get name of movie and rating
-  let movie = document.getElementById('movieName').value
-  let rating = document.getElementById('rating').value
-  let review = new Movie(movie, parseInt(rating))
-  // Validate the object values
-  let result = review.validate()
+  let showName = $('#showName').val();
+  let type = $('#type').val();
+  let status = $('#status').val();
+  let rating = $('#rating').val();
+  let show = new Show(showName, type, status, parseInt(rating))
+  // Validate the object values?
+  let result = true
   if (result) {
     // Add object to list
-    list.push(review)
+    list.push(show)
     // Set fields to blank string
-    document.getElementById('movieName').value = ''
-    document.getElementById('rating').value = ''
+  $('#showName').val('');
   } else {
     // Alert of bad values
     alert("Please fill in the fields with a valid entry.")
