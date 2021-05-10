@@ -22,7 +22,7 @@
           <ul>          
             <li><a href="#home">Home Page</a></li>
             <li><a href="#add">Add Show</a></li>
-            <li><a href="#list">List Show</a></li>
+            <li><a href="#list">Shows List</a></li>
           </ul>
         </div><!-- /navbar -->
         <h2>MyShowList</h2>
@@ -50,7 +50,7 @@
           <ul>
             <li><a href="#home">Home Page</a></li>
             <li><a href="#add">Add Show</a></li>
-            <li><a href="#list">List Show</a></li>
+            <li><a href="#list">Shows List</a></li>
           </ul>
         </div><!-- /navbar -->
         <h2>Add a Show</h2>
@@ -59,13 +59,13 @@
       <!-- content -->
       <div data-role="content" data-theme='e'>
         Enter Show name: <br/>
-        <input type="text" value="" id="name"/>
+        <input type="text" value="" id="showName"/>
         <label for="type">Select a Type</label>
         <select name="type" id="type">
           <option value="Movie">Movie</option>
           <option value="TVShow">TVShow</option>
         </select>
-        <label for="select-type">Current Status:</label>
+        <label for="status">Current Status:</label>
         <select name="status" id="status">
           <option value="Watching">Watching</option>
           <option value="Completed">Completed</option>
@@ -86,7 +86,7 @@
           <option value="9">9</option>
           <option value="10">10</option>
         </select>
-        <input type="button" value="Click To Add Show" id="buttonAdd" />
+        <input type="button" value="Click To Add Show" id="buttonAdd" onClick='formSubmitEvent()' />
       </div>
 
       <!-- notes footer -->
@@ -106,16 +106,16 @@
           <ul>
             <li><a href="#home">Home Page</a></li>
             <li><a href="#add">Add Show</a></li>
-            <li><a href="#add">Add Show</a></li>
+            <li><a href="#add">Shows List</a></li>
           </ul>
         </div><!-- /navbar -->
-        <h2>List Notes</h2>
+        <h2>List of Shows</h2>
       </div>
 
       <!-- content -->
       <div data-role="content" data-theme='e'>
       
-          <ul id="myList"></ul>
+          <ul id="listId"></ul>
       </div>
 
       <!-- notes footer -->

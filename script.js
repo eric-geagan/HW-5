@@ -7,11 +7,14 @@ class Show {
   }
 
   getAll() {
-    return 'some string'
+    return this.status + ' ' + this.type + ': "' + this.name + '" Rating: ' + this.rating
   }
 }
 
 let list = []
+$(document).on("pagebeforeshow","#list",function() {
+  showEntries()
+});
 
 function formSubmitEvent() {
   // Get name of movie and rating
@@ -34,15 +37,10 @@ function formSubmitEvent() {
 }
 
 function showEntries() {
-    let parent = document.getElementById('listId')
-    while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
-    }
-    list.forEach(item => {
-      let text = item.getAll()
-      let list = document.createElement('li')
-      let node = document.createTextNode(text)
-      list.appendChild(node)
-      parent.appendChild(list)
-    })
+  let parent = $('#listId')
+  parent.empty()
+  list.forEach(item => {
+    let text = item.getAll()
+    parent.append("<li>" + text + "</li>");
+  })
 }
