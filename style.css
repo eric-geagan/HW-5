@@ -13,8 +13,8 @@ h2
     color:  rgb(49, 49, 49);}
 
 .centering {
-        height: 10em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+ height: 10em;
+ display: flex;
+ align-items: center;
+ justify-content: center;
       }
