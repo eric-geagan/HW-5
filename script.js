@@ -7,7 +7,7 @@ class Show {
   }
 
   getAll() {
-    return this.status + ' ' + this.type + ': "' + this.name + '" Rating: ' + this.rating
+    return this.type + ': "' + this.name + '", ' + 'Current Status: '+ this.status +  ', Rating: ' + this.rating
   }
 }
 
