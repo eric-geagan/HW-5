@@ -18,3 +18,19 @@ h2
  align-items: center;
  justify-content: center;
       }
+
+#homeDiv{
+  background-color: blue;
+}
+
+.statBlock {
+  text-align: left;
+}
+
+.statBlock > div {
+  vertical-align: top;
+  display: inline-block;
+}
+
+      
+      
