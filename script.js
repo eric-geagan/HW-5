@@ -1,21 +1,17 @@
 let list = []
 class Show {
-  constructor( pname, ptype, pstatus, prating, pURL, pID) {
+  constructor(pname, ptype, pstatus, prating, pURL) {
     this.name = pname
     this.type = ptype
     this.status = pstatus
     this.rating = prating
     this.URL = pURL
-    this.ID = pID
-    this.ID = list.length + 1;
   }
 
   getAll() {
     return this.type + ': "' + this.name + '", ' + 'Current Status: '+ this.status +  ', Rating: ' + this.rating
   }
 }
-
-
 
 $(document).on("pagebeforeshow","#list",function() {
   showEntries()
@@ -24,16 +20,6 @@ $(document).on("pagebeforeshow","#list",function() {
 $(document).on('pagebeforeshow','#stats',function() {
   showValues()
 })
-//this doesn't work idk why.
-// $(document).on("pagebeforeshow", "#list", function (event) {   // have to use jQuery 
-//   let localID = document.getElementById("IDparmHere").innerHTML;
-//   document.getElementById("name").innerHTML = "The title is: " + list[localID - 1];
-//   document.getElementById("oneYear").innerHTML = "Year released: " + list[localID - 1].type;
-//   document.getElementById("oneGenre").innerHTML = "Genre: " + list[localID - 1].status;
-//   document.getElementById("oneWoman").innerHTML = "Leading Woman: " + list[localID - 1].rating;
- 
-//   document.getElementById("oneURL").innerHTML = movieArray[localID - 1].URL;
-// });
 
 function formSubmitEvent() {
   // Get name of movie and rating
